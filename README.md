@@ -1,7 +1,7 @@
 Nexendrie PHP image
 ===================
 
-Nexendrie PHP docker image for continuous integration. It is based on dockette/php.
+Nexendrie PHP docker image for continuous integration. It is based on [dockette/php] (https://github.com/dockette/php).
 
 PHP version: 7.1
 
