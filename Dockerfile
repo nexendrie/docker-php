@@ -31,8 +31,6 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         php7.1-curl \
         php7.1-gd \
         php7.1-intl \
-        php7.1-imagick \
-        php7.1-imap \
         php7.1-mbstring \
         php7.1-mcrypt \
         php7.1-mysql \
