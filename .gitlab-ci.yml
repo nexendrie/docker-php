@@ -1,7 +1,14 @@
+stages:
+- deploy
+
 default:
+  stage: deploy
   image: docker:latest
   services:
   - docker:dind
+  environment:
+    name: dockerhub
+    url: https://hub.docker.com/r/nexendrie/php/
   before_script:
   - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
   script:
