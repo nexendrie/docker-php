@@ -1,0 +1,10 @@
+default:
+  image: docker:latest
+  services:
+  - docker:dind
+  before_script:
+  - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
+  script:
+  - docker pull dockette/jessie
+  - docker build -t nexendrie/php -f Dockerfile .
+  - docker push nexendrie/php
