@@ -1,0 +1,5 @@
+{
+    "require": {
+        "nexendrie/site-generator": "1.0.x-dev"
+    }
+}

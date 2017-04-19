@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Nexendrie Website" basedir="." default="generate">
+  <target name="generate">
+    <exec executable="composer" logoutput="true" passthru="true" checkreturn="true">
+      <arg value="install"/>
+      <arg value="--prefer-dist"/>
+      <arg value="--no-progress"/>
+      <arg value="--no-suggest"/>
+      <arg value="--no-interaction"/>
+    </exec>
+    <exec executable="vendor/bin/generate-site" logoutput="true" passthru="true" checkreturn="true"/>
+  </target>
+</project>

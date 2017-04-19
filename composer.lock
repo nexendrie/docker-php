@@ -1,0 +1,364 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "321595be936ebd2556e2bcf71c89e131",
+    "packages": [
+        {
+            "name": "cebe/markdown",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cebe/markdown.git",
+                "reference": "c30eb5e01fe021cc5bba2f9ee0eeef96d4931166"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/c30eb5e01fe021cc5bba2f9ee0eeef96d4931166",
+                "reference": "c30eb5e01fe021cc5bba2f9ee0eeef96d4931166",
+                "shasum": ""
+            },
+            "require": {
+                "lib-pcre": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "cebe/indent": "*",
+                "facebook/xhprof": "*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "bin": [
+                "bin/markdown"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "cebe\\markdown\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Creator"
+                }
+            ],
+            "description": "A super fast, highly extensible markdown parser for PHP",
+            "homepage": "https://github.com/cebe/markdown#readme",
+            "keywords": [
+                "extensible",
+                "fast",
+                "gfm",
+                "markdown",
+                "markdown-extra"
+            ],
+            "time": "2016-09-14T20:40:20+00:00"
+        },
+        {
+            "name": "nette/command-line",
+            "version": "v1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/command-line.git",
+                "reference": "52e19a4fc581ec6565c683c760f6f9c73edff5e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/command-line/zipball/52e19a4fc581ec6565c683c760f6f9c73edff5e8",
+                "reference": "52e19a4fc581ec6565c683c760f6f9c73edff5e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.4"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Command Line Tools",
+            "homepage": "https://nette.org",
+            "time": "2017-02-07T17:51:07+00:00"
+        },
+        {
+            "name": "nette/finder",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/finder.git",
+                "reference": "5cabd5fe89f9903715359a403b820c7f94f9bb5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/finder/zipball/5cabd5fe89f9903715359a403b820c7f94f9bb5e",
+                "reference": "5cabd5fe89f9903715359a403b820c7f94f9bb5e",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "~2.4",
+                "php": ">=5.6.0"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Finder: Files Searching",
+            "homepage": "https://nette.org",
+            "time": "2016-05-17T15:49:06+00:00"
+        },
+        {
+            "name": "nette/neon",
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/neon.git",
+                "reference": "1a78ff64b1e161ebccc03bdf9366450a69365f5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/neon/zipball/1a78ff64b1e161ebccc03bdf9366450a69365f5b",
+                "reference": "1a78ff64b1e161ebccc03bdf9366450a69365f5b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette NEON: parser & generator for Nette Object Notation",
+            "homepage": "http://ne-on.org",
+            "time": "2017-01-13T08:00:19+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v2.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "28ad4e2a6dcf143c23bde969a825f10a5d513602"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/28ad4e2a6dcf143c23bde969a825f10a5d513602",
+                "reference": "28ad4e2a6dcf143c23bde969a825f10a5d513602",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize() and toAscii()",
+                "ext-intl": "for script transliteration in Strings::webalize() and toAscii()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available",
+                "https://nette.org/donate": "\u001b[1;37;42m Please consider supporting Nette via a donation \u001b[0m"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Utility Classes",
+            "homepage": "https://nette.org",
+            "time": "2017-03-29T16:55:54+00:00"
+        },
+        {
+            "name": "nexendrie/site-generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nexendrie/site-generator.git",
+                "reference": "b0c8155719a838f024b8e7fcfdbf02c3e59135cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nexendrie/site-generator/zipball/b0c8155719a838f024b8e7fcfdbf02c3e59135cd",
+                "reference": "b0c8155719a838f024b8e7fcfdbf02c3e59135cd",
+                "shasum": ""
+            },
+            "require": {
+                "cebe/markdown": "^1.1",
+                "nette/command-line": "^1.1",
+                "nette/finder": "^2.4",
+                "nette/neon": "^2.4",
+                "nette/utils": "^2.4",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "nette/tester": "dev-master",
+                "nexendrie/code-quality": "dev-master"
+            },
+            "bin": [
+                "src/generate-site"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nexendrie\\SiteGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Konečný",
+                    "email": "jakub.konecny2@centrum.cz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Static site generator which turns Markdown into HTML",
+            "homepage": "https://nexendrie.gitlab.io",
+            "keywords": [
+                "generator",
+                "html",
+                "markdown",
+                "site",
+                "static",
+                "website"
+            ],
+            "time": "2017-04-19T10:09:48+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "nexendrie/site-generator": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

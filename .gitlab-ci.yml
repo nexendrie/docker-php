@@ -15,3 +15,20 @@ default:
   - docker pull dockette/jessie
   - docker build -t nexendrie/php -f Dockerfile .
   - docker push nexendrie/php
+
+pages:
+  stage: deploy
+  image: nexendrie/php
+  environment:
+    name: pages
+    url: https://nexendrie.gitlab.io/docker-php
+  script:
+  - phing generate
+  cache:
+    paths:
+    - vendor/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
