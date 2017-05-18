@@ -15,6 +15,7 @@ default:
   - docker pull dockette/jessie
   - docker build -t nexendrie/php -f Dockerfile .
   - docker push nexendrie/php:latest
+  - docker tag nexendrie/php nexendrie/php:7.1
   - docker push nexendrie/php:7.1
 
 pages:
