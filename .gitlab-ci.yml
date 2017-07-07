@@ -1,7 +1,8 @@
 stages:
+- build
 - deploy
 
-default:
+deploy:php71:
   stage: deploy
   image: docker:latest
   services:
@@ -17,6 +18,17 @@ default:
   - docker push nexendrie/php:latest
   - docker tag nexendrie/php nexendrie/php:7.1
   - docker push nexendrie/php:7.1
+  only:
+  - master@nexendrie/docker-php
+
+build:php71:
+  stage: build
+  image: docker:latest
+  script:
+  - docker pull dockette/jessie
+  - docker build -t nexendrie/php -f Dockerfile .
+  except:
+  - master@nexendrie/docker-php
 
 pages:
   stage: deploy
@@ -33,4 +45,4 @@ pages:
     paths:
     - public
   only:
-  - master
+  - master@nexendrie/docker-php
