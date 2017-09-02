@@ -2,33 +2,64 @@ stages:
 - build
 - deploy
 
-deploy:php71:
+.job_template: &deploy_job
   stage: deploy
+
   image: docker:latest
+
   services:
   - docker:dind
+
+  before_script:
+  - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
+
+  script:
+  - docker pull dockette/jessie
+  - docker build -t nexendrie/php -f $VERSION/Dockerfile $VERSION
+  - docker tag nexendrie/php nexendrie/php:$VERSION
+  - docker push nexendrie/php:$VERSION
+
+  only:
+    - master@nexendrie/docker-php
+
+.job_template: &build_job
+  stage: build
+
+  image: docker:latest
+
+  services:
+  - docker:dind
+
+  script:
+  - docker build -t nexendrie/php -f $VERSION/Dockerfile $VERSION
+
+  except:
+    - master@nexendrie/docker-php
+
+deploy:php7.1:
+  <<: *deploy_job
   environment:
     name: dockerhub
     url: https://hub.docker.com/r/nexendrie/php/
-  before_script:
-  - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
-  script:
-  - docker pull dockette/jessie
-  - docker build -t nexendrie/php -f Dockerfile .
+  after_script:
   - docker push nexendrie/php:latest
-  - docker tag nexendrie/php nexendrie/php:7.1
-  - docker push nexendrie/php:7.1
-  only:
-  - master@nexendrie/docker-php
+  variables:
+    VERSION: "7.1"
 
-build:php71:
-  stage: build
-  image: docker:latest
-  script:
-  - docker pull dockette/jessie
-  - docker build -t nexendrie/php -f Dockerfile .
-  except:
-  - master@nexendrie/docker-php
+build:php7.1:
+  <<: *build_job
+  variables:
+    VERSION: "7.1"
+
+deploy:php7.2:
+  <<: *deploy_job
+  variables:
+    VERSION: "7.2"
+
+build:php7.2:
+  <<: *build_job
+  variables:
+    VERSION: "7.2"
 
 pages:
   stage: deploy

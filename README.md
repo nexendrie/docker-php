@@ -6,7 +6,7 @@ Nexendrie PHP image
 
 Nexendrie PHP docker image for continuous integration. It is based on [dockette/php] (https://github.com/dockette/php).
 
-PHP version: 7.1
+PHP versions: 7.1, 7.2
 
 PHP extensions: apc, apcu, bcmath, bz2, calendar, cgi, cli, ctype, curl, gd, gettext, iconv, intl, mbstring, mcrypt, mysqli, pgsql, pdo, xdebug, sqlite3, ssh2, xml, zip
 
