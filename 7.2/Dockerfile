@@ -32,7 +32,6 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         php7.2-gd \
         php7.2-intl \
         php7.2-mbstring \
-        #php7.2-mcrypt \
         php7.2-mysql \
         php7.2-pgsql \
         php7.2-sqlite3 \
