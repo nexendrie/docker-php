@@ -230,16 +230,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v2.4.8",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "f1584033b5af945b470533b466b81a789d532034"
+                "reference": "8a85ce76298c8a8941f912b8fa3ee93ca17d2ebc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/f1584033b5af945b470533b466b81a789d532034",
-                "reference": "f1584033b5af945b470533b466b81a789d532034",
+                "url": "https://api.github.com/repos/nette/utils/zipball/8a85ce76298c8a8941f912b8fa3ee93ca17d2ebc",
+                "reference": "8a85ce76298c8a8941f912b8fa3ee93ca17d2ebc",
                 "shasum": ""
             },
             "require": {
@@ -263,12 +263,15 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
                 "classmap": [
                     "src/"
+                ],
+                "files": [
+                    "src/loader.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -305,7 +308,7 @@
                 "utility",
                 "validation"
             ],
-            "time": "2017-08-20T17:32:29+00:00"
+            "time": "2018-02-19T14:42:42+00:00"
         },
         {
             "name": "nexendrie/site-generator",
@@ -313,12 +316,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/nexendrie/site-generator.git",
-                "reference": "699baf21eb134f0491f878805232c2dfc2d0c6a4"
+                "reference": "3d6945aff75f442297f174c7d84503406f4aa98f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/nexendrie%2Fsite-generator/repository/archive.zip?sha=699baf21eb134f0491f878805232c2dfc2d0c6a4",
-                "reference": "699baf21eb134f0491f878805232c2dfc2d0c6a4",
+                "url": "https://gitlab.com/api/v4/projects/nexendrie%2Fsite-generator/repository/archive.zip?sha=3d6945aff75f442297f174c7d84503406f4aa98f",
+                "reference": "3d6945aff75f442297f174c7d84503406f4aa98f",
                 "shasum": ""
             },
             "require": {
@@ -328,13 +331,13 @@
                 "nette/neon": "^2.4",
                 "nette/utils": "^2.4",
                 "php": ">=7.1.0",
-                "symfony/options-resolver": "^3.3"
+                "symfony/options-resolver": "^4.0"
             },
             "require-dev": {
                 "nexendrie/code-quality": "dev-master"
             },
             "bin": [
-                "src/generate-site"
+                "bin/generate-site"
             ],
             "type": "library",
             "extra": {
@@ -368,29 +371,29 @@
                 "static",
                 "website"
             ],
-            "time": "2017-09-06T11:40:16+00:00"
+            "time": "2018-03-02T12:50:26+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.3.9",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "ee4e22978fe885b54ee5da8c7964f0a5301abfb6"
+                "reference": "371532a2cfe932f7a3766dd4c45364566def1dd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/ee4e22978fe885b54ee5da8c7964f0a5301abfb6",
-                "reference": "ee4e22978fe885b54ee5da8c7964f0a5301abfb6",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/371532a2cfe932f7a3766dd4c45364566def1dd0",
+                "reference": "371532a2cfe932f7a3766dd4c45364566def1dd0",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8"
+                "php": "^7.1.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -422,7 +425,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2017-07-29T21:54:42+00:00"
+            "time": "2018-01-18T22:19:33+00:00"
         }
     ],
     "packages-dev": [],
