@@ -39,7 +39,8 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         php7.1-ssh2 \
         php7.1-zip \
         php-xdebug \
-        php7.1-xml && \
+        php7.1-xml \
+        php7.1-phpdbg && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     curl -sS https://www.phing.info/get/phing-latest.phar > /usr/local/bin/phing && \
