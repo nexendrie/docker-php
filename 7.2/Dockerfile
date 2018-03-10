@@ -8,6 +8,8 @@ ENV PHP_CLI_DIR=/etc/php/7.2/cli/
 ENV PHP_CLI_CONF_DIR=${PHP_CLI_DIR}/conf.d
 ENV PHP_CGI_DIR=/etc/php/7.2/cgi/
 ENV PHP_CGI_CONF_DIR=${PHP_CGI_DIR}/conf.d
+ENV PHP_PHPDBG_DIR=/etc/php/7.2/phpdbg/
+ENV PHP_PHPDBG_CONF_DIR=${PHP_PHPDBG_DIR}/conf.d
 ENV TZ=Europe/Prague
 ENV COMPOSER_NO_INTERACTION=1
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -39,7 +41,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         php7.2-zip \
         php-xdebug \
         php7.2-xml \
-        php7.1-phpdbg && \
+        php7.2-phpdbg && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     curl -sS https://www.phing.info/get/phing-latest.phar > /usr/local/bin/phing && \
@@ -54,7 +56,9 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     rm -rf /var/lib/apt/lists/* /var/lib/log/* /tmp/* /var/tmp/*
 
 # FILES (it overrides originals)
-ADD conf.d/custom.ini ${PHP_MODS_DIR}/custom.ini
+ADD conf.d/custom.ini ${PHP_CLI_CONF_DIR}/20-custom.ini
+ADD conf.d/custom.ini ${PHP_CGI_CONF_DIR}/20-custom.ini
+ADD conf.d/custom.ini ${PHP_PHPDBG_CONF_DIR}/20-custom.ini
 
 # COMMAND
 CMD ["php"]
