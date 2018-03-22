@@ -34,7 +34,6 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         php7.1-gd \
         php7.1-intl \
         php7.1-mbstring \
-        php7.1-mcrypt \
         php7.1-mysql \
         php7.1-pgsql \
         php7.1-sqlite3 \
