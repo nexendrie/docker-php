@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cebe/markdown",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cebe/markdown.git",
-                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e"
+                "reference": "62efec06056b045c8c5e9c1126d9253ba27b9cb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/25b28bae8a6f185b5030673af77b32e1163d5c6e",
-                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/62efec06056b045c8c5e9c1126d9253ba27b9cb3",
+                "reference": "62efec06056b045c8c5e9c1126d9253ba27b9cb3",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 "markdown",
                 "markdown-extra"
             ],
-            "time": "2017-07-16T21:13:23+00:00"
+            "time": "2018-03-14T21:01:25+00:00"
         },
         {
             "name": "nette/command-line",
@@ -316,16 +316,16 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/nexendrie/site-generator.git",
-                "reference": "3d6945aff75f442297f174c7d84503406f4aa98f"
+                "reference": "1b942fdbdbd8cdd69a142196934784bc31ad1a2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/nexendrie%2Fsite-generator/repository/archive.zip?sha=3d6945aff75f442297f174c7d84503406f4aa98f",
-                "reference": "3d6945aff75f442297f174c7d84503406f4aa98f",
+                "url": "https://gitlab.com/api/v4/projects/nexendrie%2Fsite-generator/repository/archive.zip?sha=1b942fdbdbd8cdd69a142196934784bc31ad1a2f",
+                "reference": "1b942fdbdbd8cdd69a142196934784bc31ad1a2f",
                 "shasum": ""
             },
             "require": {
-                "cebe/markdown": "^1.1",
+                "cebe/markdown": "^1.2",
                 "nette/command-line": "^1.1",
                 "nette/finder": "^2.4",
                 "nette/neon": "^2.4",
@@ -371,7 +371,7 @@
                 "static",
                 "website"
             ],
-            "time": "2018-03-02T12:50:26+00:00"
+            "time": "2018-03-15T15:58:30+00:00"
         },
         {
             "name": "symfony/options-resolver",
