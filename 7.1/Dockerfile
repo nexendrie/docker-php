@@ -37,7 +37,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         php7.1-mysql \
         php7.1-pgsql \
         php7.1-sqlite3 \
-        php7.1-ssh2 \
+        php-ssh2 \
         php7.1-zip \
         php-xdebug \
         php7.1-xml \
