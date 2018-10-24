@@ -1,4 +1,4 @@
-FROM dockette/jessie
+FROM dockette/debian:stretch
 
 MAINTAINER Jakub Konečný <jakub.konecny2@centrum.cz>
 
@@ -20,7 +20,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y wget curl apt-transport-https ca-certificates && \
     # PHP DEB.SURY.CZ ##########################################################
     wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
-    echo "deb https://packages.sury.org/php/ jessie main" > /etc/apt/sources.list.d/php.list && \
+    echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         php7.2-apc \
