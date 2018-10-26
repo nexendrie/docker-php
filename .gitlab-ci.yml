@@ -59,6 +59,16 @@ build:php7.2:
   <<: *build_job
   variables:
     VERSION: "7.2"
+   
+deploy:php7.3:
+  <<: *deploy_job
+  variables:
+    VERSION: "7.3"
+
+build:php7.3:
+  <<: *build_job
+  variables:
+    VERSION: "7.3"
 
 pages:
   stage: deploy
