@@ -85,4 +85,8 @@ pages:
     paths:
     - public
   only:
-  - master@nexendrie/docker-php
+    refs:
+      - master@nexendrie/docker-php
+    changes:
+      - composer.lock
+      - index.*
