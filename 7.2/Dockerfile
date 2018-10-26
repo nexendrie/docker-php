@@ -25,7 +25,6 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
         php-apcu \
         php-apcu-bc \
-        php7.2-apcu \
         php7.2-bcmath \
         php7.2-bz2 \
         php7.2-cgi \
