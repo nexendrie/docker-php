@@ -40,8 +40,6 @@ deploy:php7.1:
   environment:
     name: dockerhub
     url: https://hub.docker.com/r/nexendrie/php/
-  after_script:
-  - docker push nexendrie/php:latest
   variables:
     VERSION: "7.1"
 
@@ -62,6 +60,8 @@ build:php7.2:
    
 deploy:php7.3:
   <<: *deploy_job
+  after_script:
+  - docker push nexendrie/php:latest
   variables:
     VERSION: "7.3"
 
