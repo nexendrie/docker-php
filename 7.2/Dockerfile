@@ -23,7 +23,8 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
-        php7.2-apc \
+        php-apcu \
+        php-apcu-bc \
         php7.2-apcu \
         php7.2-bcmath \
         php7.2-bz2 \
