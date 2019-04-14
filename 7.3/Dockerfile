@@ -1,7 +1,5 @@
 FROM dockette/debian:stretch
 
-MAINTAINER Jakub Konečný <jakub.konecny2@centrum.cz>
-
 # PHP
 ENV PHP_MODS_DIR=/etc/php/7.3/mods-available
 ENV PHP_CLI_DIR=/etc/php/7.3/cli/
