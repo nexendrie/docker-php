@@ -2,6 +2,9 @@ stages:
 - build
 - deploy
 
+variables:
+  DEFAULT_VERSION: "7.3"
+
 .job_template: &deploy_job
   stage: deploy
 
@@ -14,7 +17,8 @@ stages:
   - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
 
   script:
-  - docker build -t nexendrie/php -f $VERSION/Dockerfile $VERSION
+  - sed -i -e "s/$DEFAULT_VERSION/$VERSION/g" Dockerfile
+  - docker build -t nexendrie/php:$VERSION .
   - docker tag nexendrie/php nexendrie/php:$VERSION
   - docker push nexendrie/php:$VERSION
 
@@ -30,7 +34,8 @@ stages:
   - docker:dind
 
   script:
-  - docker build -t nexendrie/php -f $VERSION/Dockerfile $VERSION
+  - sed -i -e "s/$DEFAULT_VERSION/$VERSION/g" Dockerfile
+  - docker build -t nexendrie/php:$VERSION .
 
   except:
     - master@nexendrie/docker-php
