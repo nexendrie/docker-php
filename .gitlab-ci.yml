@@ -5,7 +5,7 @@ stages:
 variables:
   DEFAULT_VERSION: "7.3"
 
-.job_template: &deploy_job
+.deploy_job: &deploy_job
   stage: deploy
 
   image: docker:latest
@@ -19,13 +19,12 @@ variables:
   script:
   - sed -i -e "s/$DEFAULT_VERSION/$VERSION/g" Dockerfile
   - docker build -t nexendrie/php:$VERSION .
-  - docker tag nexendrie/php nexendrie/php:$VERSION
   - docker push nexendrie/php:$VERSION
 
   only:
     - master@nexendrie/docker-php
 
-.job_template: &build_job
+.build_job: &build_job
   stage: build
 
   image: docker:latest
@@ -35,7 +34,7 @@ variables:
 
   script:
   - sed -i -e "s/$DEFAULT_VERSION/$VERSION/g" Dockerfile
-  - docker build -t nexendrie/php:$VERSION .
+  - docker build .
 
   except:
     - master@nexendrie/docker-php
