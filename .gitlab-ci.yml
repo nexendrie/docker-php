@@ -65,7 +65,7 @@ build:php7.2:
 deploy:php7.3:
   <<: *deploy_job
   after_script:
-  - docker tag nexendrie/php nexendrie/php:latest
+  - docker build -t nexendrie/php:latest .
   - docker push nexendrie/php:latest
   variables:
     VERSION: "7.3"
