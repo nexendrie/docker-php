@@ -13,14 +13,14 @@ ENV COMPOSER_NO_INTERACTION=1
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # INSTALLATION
-RUN apt-get update && apt-get dist-upgrade -y && \
+RUN apt update && apt full-upgrade -y && \
     # DEPENDENCIES #############################################################
-    apt-get install -y wget curl apt-transport-https ca-certificates && \
+    apt install -y wget curl apt-transport-https ca-certificates && \
     # PHP DEB.SURY.CZ ##########################################################
     wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
     echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends \
+    apt update && \
+    apt install -y --no-install-recommends \
         php-apcu \
         php-apcu-bc \
         php7.3-bcmath \
@@ -48,9 +48,9 @@ RUN apt-get update && apt-get dist-upgrade -y && \
     ln -s ${PHP_MODS_DIR}/custom.ini ${PHP_CLI_CONF_DIR}/999-custom.ini && \
     ln -s ${PHP_MODS_DIR}/custom.ini ${PHP_CGI_CONF_DIR}/999-custom.ini && \
     # CLEAN UP #################################################################
-    apt-get clean -y && \
-    apt-get autoclean -y && \
-    apt-get autoremove -y && \
+    apt clean -y && \
+    apt autoclean -y && \
+    apt autoremove -y && \
     rm -rf /var/lib/apt/lists/* /var/lib/log/* /tmp/* /var/tmp/*
 
 # FILES (it overrides originals)
