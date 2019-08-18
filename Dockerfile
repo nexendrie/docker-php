@@ -40,7 +40,7 @@ RUN apt update && apt full-upgrade -y && \
         php-xdebug \
         php7.3-xml \
         php7.3-phpdbg \
-        php7.3-pcov && \
+        php-pcov && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     # PHING ####################################################################

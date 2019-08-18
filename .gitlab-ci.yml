@@ -75,6 +75,16 @@ build:php7.3:
   variables:
     VERSION: "7.3"
 
+deploy:php7.4:
+  <<: *deploy_job
+  variables:
+    VERSION: "7.4"
+
+build:php7.4:
+  <<: *build_job
+  variables:
+    VERSION: "7.4"
+
 pages:
   stage: deploy
   image: nexendrie/php
