@@ -1,4 +1,7 @@
-FROM dockette/debian:buster
+FROM ubuntu:18.04
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV TERM xterm
 
 # PHP
 ENV PHP_MODS_DIR=/etc/php/7.3/mods-available
@@ -15,10 +18,10 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # INSTALLATION
 RUN apt update && apt full-upgrade -y && \
     # DEPENDENCIES #############################################################
-    apt install -y wget curl apt-transport-https ca-certificates unzip && \
+    apt install -y wget curl apt-transport-https ca-certificates unzip gnupg2 && \
     # PHP DEB.SURY.CZ ##########################################################
-    wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
-    echo "deb https://packages.sury.org/php/ buster main" > /etc/apt/sources.list.d/php.list && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C && \
+    echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt/sources.list.d/php.list && \
     apt update && \
     apt install -y --no-install-recommends \
         php-apcu \
