@@ -39,20 +39,10 @@ variables:
   except:
     - master@nexendrie/docker-php
 
-deploy:php7.1:
-  <<: *deploy_job
+deploy:php7.2:
   environment:
     name: dockerhub
     url: https://hub.docker.com/r/nexendrie/php/
-  variables:
-    VERSION: "7.1"
-
-build:php7.1:
-  <<: *build_job
-  variables:
-    VERSION: "7.1"
-
-deploy:php7.2:
   <<: *deploy_job
   variables:
     VERSION: "7.2"
