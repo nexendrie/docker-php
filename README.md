@@ -10,4 +10,4 @@ PHP versions: 7.2, 7.3, 7.4
 
 PHP extensions: apc, apcu, bcmath, bz2, calendar, cgi, cli, ctype, curl, gd, gettext, iconv, intl, mbstring, mysqli, pgsql, pdo, xdebug, sqlite3, ssh2, xml, zip, phpdbg, pcov
 
-Other stuff: Composer, phing
+Other stuff: Composer, phing, git

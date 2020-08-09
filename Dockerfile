@@ -19,11 +19,15 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN apt update && apt full-upgrade -y && \
     # DEPENDENCIES #############################################################
     apt install -y wget curl apt-transport-https ca-certificates unzip gnupg2 && \
+    # GIT ######################################################################
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A1715D88E1DF1F24 && \
+    echo "deb http://ppa.launchpad.net/git-core/ppa/ubuntu focal main" > /etc/apt/sources.list.d/git.list && \
     # PHP DEB.SURY.CZ ##########################################################
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C && \
     echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/php.list && \
     apt update && \
     apt install -y --no-install-recommends \
+        git \
         php-apcu \
         php-apcu-bc \
         php7.4-bcmath \
