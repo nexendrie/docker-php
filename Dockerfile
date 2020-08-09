@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
@@ -21,7 +21,7 @@ RUN apt update && apt full-upgrade -y && \
     apt install -y wget curl apt-transport-https ca-certificates unzip gnupg2 && \
     # PHP DEB.SURY.CZ ##########################################################
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C && \
-    echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt/sources.list.d/php.list && \
+    echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/php.list && \
     apt update && \
     apt install -y --no-install-recommends \
         php-apcu \
