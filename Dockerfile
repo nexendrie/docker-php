@@ -40,7 +40,6 @@ RUN apt update && apt full-upgrade -y && \
         php7.4-intl \
         php7.4-mbstring \
         php7.4-mysql \
-        php7.4-pgsql \
         php7.4-sqlite3 \
         php-ssh2 \
         php7.4-zip \
