@@ -17,10 +17,10 @@ RUN apt update && apt full-upgrade -y && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install -j$(nproc) gd && \
     docker-php-ext-install -j$(nproc) intl && \
-    mkdir -p /usr/src/php/ext/apcu && curl -fsSl https://pecl.php.net/get/apcu | tar xvz -C "/usr/src/php/ext/apcu" --strip 1 && \
-    docker-php-ext-install apcu && \
-    mkdir -p /usr/src/php/ext/apcu_bc && curl -fsSl https://pecl.php.net/get/apcu_bc | tar xvz -C "/usr/src/php/ext/apcu_bc" --strip 1 && \
-    docker-php-ext-install apcu_bc && \
+    #mkdir -p /usr/src/php/ext/apcu && curl -fsSl https://pecl.php.net/get/apcu | tar xvz -C "/usr/src/php/ext/apcu" --strip 1 && \
+    #docker-php-ext-install apcu && \
+    #mkdir -p /usr/src/php/ext/apcu_bc && curl -fsSl https://pecl.php.net/get/apcu_bc | tar xvz -C "/usr/src/php/ext/apcu_bc" --strip 1 && \
+    #docker-php-ext-install apcu_bc && \
     mkdir -p /usr/src/php/ext/pcov && curl -fsSl https://pecl.php.net/get/pcov | tar xvz -C "/usr/src/php/ext/pcov" --strip 1 && \
     docker-php-ext-install pcov && \
     # COMPOSER #################################################################
