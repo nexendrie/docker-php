@@ -75,6 +75,21 @@ build:php7.4:
   variables:
     VERSION: "7.4"
 
+deploy:php8.0:
+  <<: *deploy_job
+  script:
+  - docker build -t nexendrie/php:$VERSION -f $VERSION/Dockerfile .
+  - docker push nexendrie/php:$VERSION
+  variables:
+    VERSION: "8.0"
+
+build:php8.0:
+  <<: *build_job
+  script:
+  - docker build -f $VERSION/Dockerfile .
+  variables:
+    VERSION: "8.0"
+
 pages:
   stage: deploy
   image: nexendrie/php
