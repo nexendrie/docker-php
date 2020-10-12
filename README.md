@@ -8,6 +8,6 @@ Nexendrie PHP docker image for continuous integration. It is based on [dockette/
 
 PHP versions: 7.2, 7.3, 7.4
 
-PHP extensions: apc, apcu, bcmath, bz2, calendar, cgi, cli, ctype, curl, gd, gettext, iconv, intl, mbstring, mysqli, pdo, xdebug, sqlite3, ssh2, xml, zip, phpdbg, pcov
+PHP extensions: apc, apcu, bcmath, bz2, calendar, cgi, cli, ctype, curl, gd, gettext, iconv, intl, mbstring, mysqli, pdo, sqlite3, ssh2, xml, zip, phpdbg, pcov
 
 Other stuff: Composer, phing, git
