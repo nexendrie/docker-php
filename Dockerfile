@@ -28,7 +28,7 @@ RUN apt update && apt full-upgrade -y && \
     apt update && \
     apt install -y --no-install-recommends \
         git \
-        php-apcu \
+        php7.4-apcu \
         php-apcu-bc \
         php7.4-bcmath \
         php7.4-bz2 \
@@ -41,7 +41,7 @@ RUN apt update && apt full-upgrade -y && \
         php7.4-mbstring \
         php7.4-mysql \
         php7.4-sqlite3 \
-        php-ssh2 \
+        php7.4-ssh2 \
         php7.4-zip \
         php7.4-xml \
         php7.4-phpdbg \
