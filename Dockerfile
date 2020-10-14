@@ -29,7 +29,7 @@ RUN apt update && apt full-upgrade -y && \
     apt install -y --no-install-recommends \
         git \
         php7.4-apcu \
-        php-apcu-bc \
+        php7.4-apcu-bc \
         php7.4-bcmath \
         php7.4-bz2 \
         php7.4-cgi \
