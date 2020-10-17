@@ -45,7 +45,7 @@ RUN apt update && apt full-upgrade -y && \
         php7.4-zip \
         php7.4-xml \
         php7.4-phpdbg \
-        php-pcov && \
+        php7.4-pcov && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     # PHING ####################################################################
