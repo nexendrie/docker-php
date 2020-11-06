@@ -16,6 +16,7 @@ RUN apt update && apt full-upgrade -y && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install -j$(nproc) gd && \
     docker-php-ext-install -j$(nproc) intl && \
+    docker-php-ext-install calendar && \
     mkdir -p /usr/src/php/ext/pcov && curl -fsSl https://pecl.php.net/get/pcov | tar xvz -C "/usr/src/php/ext/pcov" --strip 1 && \
     docker-php-ext-install pcov && \
     # COMPOSER #################################################################
