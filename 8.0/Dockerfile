@@ -1,4 +1,4 @@
-FROM php:8.0-rc
+FROM php:8.0
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
