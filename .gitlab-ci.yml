@@ -85,6 +85,16 @@ build:php8.0:
   variables:
     VERSION: "8.0"
 
+deploy:php8.1:
+  <<: *deploy_job
+  variables:
+    VERSION: "8.1"
+
+build:php8.1:
+  <<: *build_job
+  variables:
+    VERSION: "8.1"
+
 pages:
   stage: deploy
   image: nexendrie/php
