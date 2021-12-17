@@ -4,12 +4,12 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
 # PHP
-ENV PHP_MODS_DIR=/etc/php/7.4/mods-available
-ENV PHP_CLI_DIR=/etc/php/7.4/cli/
+ENV PHP_MODS_DIR=/etc/php/8.1/mods-available
+ENV PHP_CLI_DIR=/etc/php/8.1/cli/
 ENV PHP_CLI_CONF_DIR=${PHP_CLI_DIR}/conf.d
-ENV PHP_CGI_DIR=/etc/php/7.4/cgi/
+ENV PHP_CGI_DIR=/etc/php/8.1/cgi/
 ENV PHP_CGI_CONF_DIR=${PHP_CGI_DIR}/conf.d
-ENV PHP_PHPDBG_DIR=/etc/php/7.4/phpdbg/
+ENV PHP_PHPDBG_DIR=/etc/php/8.1/phpdbg/
 ENV PHP_PHPDBG_CONF_DIR=${PHP_PHPDBG_DIR}/conf.d
 ENV TZ=Europe/Prague
 ENV COMPOSER_NO_INTERACTION=1
@@ -28,22 +28,22 @@ RUN apt update && apt full-upgrade -y && \
     apt update && \
     apt install -y --no-install-recommends \
         git \
-        php7.4-bcmath \
-        php7.4-bz2 \
-        php7.4-cgi \
-        php7.4-cli \
-        php7.4-ctype \
-        php7.4-curl \
-        php7.4-gd \
-        php7.4-intl \
-        php7.4-mbstring \
-        php7.4-mysql \
-        php7.4-sqlite3 \
-        php7.4-ssh2 \
-        php7.4-zip \
-        php7.4-xml \
-        php7.4-phpdbg \
-        php7.4-pcov && \
+        php8.1-bcmath \
+        php8.1-bz2 \
+        php8.1-cgi \
+        php8.1-cli \
+        php8.1-ctype \
+        php8.1-curl \
+        php8.1-gd \
+        php8.1-intl \
+        php8.1-mbstring \
+        php8.1-mysql \
+        php8.1-sqlite3 \
+        php8.1-ssh2 \
+        php8.1-zip \
+        php8.1-xml \
+        php8.1-phpdbg \
+        php8.1-pcov && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     # PHING ####################################################################

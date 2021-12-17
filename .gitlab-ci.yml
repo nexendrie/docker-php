@@ -3,7 +3,7 @@ stages:
 - deploy
 
 variables:
-  DEFAULT_VERSION: "7.4"
+  DEFAULT_VERSION: "8.1"
 
 .deploy_job: &deploy_job
   stage: deploy
@@ -63,10 +63,7 @@ build:php7.3:
     VERSION: "7.3"
 
 deploy:php7.4:
-  <<: *deploy_job   
-  after_script:
-  - docker build -t nexendrie/php:latest .
-  - docker push nexendrie/php:latest
+  <<: *deploy_job
   variables:
     VERSION: "7.4"
 
@@ -87,6 +84,9 @@ build:php8.0:
 
 deploy:php8.1:
   <<: *deploy_job
+  after_script:
+    - docker build -t nexendrie/php:latest .
+    - docker push nexendrie/php:latest
   variables:
     VERSION: "8.1"
 
