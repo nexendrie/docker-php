@@ -18,7 +18,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 # INSTALLATION
 RUN apt update && apt full-upgrade -y && \
     # DEPENDENCIES #############################################################
-    apt install -y wget curl apt-transport-https ca-certificates unzip gnupg2 software-properties-common && \
+    apt install -y wget curl ca-certificates unzip gnupg2 software-properties-common && \
     # GIT ######################################################################
     add-apt-repository ppa:git-core/ppa && \
     # PHP DEB.SURY.CZ ########################################################## \
