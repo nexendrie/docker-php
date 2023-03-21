@@ -70,6 +70,9 @@ build:php8.1:
     VERSION: "8.1"
 
 deploy:php8.2:
+  environment:
+    name: dockerhub
+    url: https://hub.docker.com/r/nexendrie/php/
   <<: *deploy_job
   after_script:
     - docker build -t nexendrie/php:latest .
