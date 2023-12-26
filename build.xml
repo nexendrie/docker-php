@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="Nexendrie Website" basedir="." default="generate">
+<project name="Nexendrie PHP Docker Image" basedir="." default="generate">
   <target name="generate">
     <exec executable="composer" logoutput="true" passthru="true" checkreturn="true">
       <arg value="install"/>
