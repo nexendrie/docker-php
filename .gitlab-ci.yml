@@ -3,7 +3,7 @@ stages:
 - deploy
 
 variables:
-  DEFAULT_VERSION: "8.2"
+  DEFAULT_VERSION: "8.3"
 
 .deploy_job: &deploy_job
   stage: deploy
@@ -70,13 +70,6 @@ build:php8.1:
     VERSION: "8.1"
 
 deploy:php8.2:
-  environment:
-    name: dockerhub
-    url: https://hub.docker.com/r/nexendrie/php/
-  <<: *deploy_job
-  after_script:
-    - docker build -t nexendrie/php:latest .
-    - docker push nexendrie/php:latest
   variables:
     VERSION: "8.2"
 
@@ -84,6 +77,23 @@ build:php8.2:
   <<: *build_job
   variables:
     VERSION: "8.2"
+
+deploy:php8.3:
+  environment:
+    name: dockerhub
+    url: https://hub.docker.com/r/nexendrie/php/
+  <<: *deploy_job
+  after_script:
+    - docker build -t nexendrie/php:latest .
+    - docker push nexendrie/php:latest
+  <<: *deploy_job
+  variables:
+    VERSION: "8.3"
+
+build:php8.3:
+  <<: *build_job
+  variables:
+    VERSION: "8.3"
 
 pages:
   stage: deploy
