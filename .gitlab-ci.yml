@@ -39,26 +39,6 @@ variables:
   except:
     - master@nexendrie/docker-php
 
-deploy:php7.4:
-  <<: *deploy_job
-  variables:
-    VERSION: "7.4"
-
-build:php7.4:
-  <<: *build_job
-  variables:
-    VERSION: "7.4"
-
-deploy:php8.0:
-  <<: *deploy_job
-  variables:
-    VERSION: "8.0"
-
-build:php8.0:
-  <<: *build_job
-  variables:
-    VERSION: "8.0"
-
 deploy:php8.1:
   <<: *deploy_job
   variables:
