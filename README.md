@@ -11,3 +11,5 @@ PHP versions: 8.1, 8.2, 8.3
 PHP extensions: bcmath, bz2, calendar, cgi, cli, ctype, curl, gd, gettext, iconv, intl, mbstring, mysqli, pdo, sqlite3, ssh2, xml, zip, phpdbg, pcov
 
 Other stuff: Composer, phing, git
+
+Sources: https://gitlab.com/nexendrie/docker-php
