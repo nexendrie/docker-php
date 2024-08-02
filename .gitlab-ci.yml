@@ -95,3 +95,4 @@ pages:
     changes:
       - composer.lock
       - index.*
+      - CONTRIBUTING.md

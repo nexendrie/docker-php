@@ -8,8 +8,7 @@
       <arg value="--no-interaction"/>
     </exec>
     <exec executable="vendor/bin/generate-site" logoutput="true" passthru="true" checkreturn="true">
-      <arg value="--ignoreFile"/>
-      <arg value="README.md"/>
+      <arg line="--ignoreFile README.md"/>
     </exec>
   </target>
 </project>
