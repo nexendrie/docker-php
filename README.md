@@ -3,6 +3,7 @@ Nexendrie PHP image
 
 [![Docker Stars](https://img.shields.io/docker/stars/nexendrie/php.svg?style=flat)](https://hub.docker.com/r/nexendrie/php/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/nexendrie/php.svg?style=flat)](https://hub.docker.com/r/nexendrie/php/)
+[![build status](https://gitlab.com/nexendrie/docker-php/badges/master/pipeline.svg?ignore_skipped=true)](https://gitlab.com/nexendrie/docker-php/commits/master)
 
 Nexendrie PHP docker image for continuous integration. It is based on [dockette/php](https://github.com/dockette/php).
 
