@@ -40,7 +40,6 @@ RUN apt update && apt full-upgrade -y && \
         php8.3-ssh2 \
         php8.3-zip \
         php8.3-xml \
-        php8.3-phpdbg \
         php8.3-pcov && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
