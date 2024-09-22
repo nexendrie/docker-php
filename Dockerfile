@@ -9,8 +9,6 @@ ENV PHP_CLI_DIR=/etc/php/8.3/cli/
 ENV PHP_CLI_CONF_DIR=${PHP_CLI_DIR}/conf.d
 ENV PHP_CGI_DIR=/etc/php/8.3/cgi/
 ENV PHP_CGI_CONF_DIR=${PHP_CGI_DIR}/conf.d
-ENV PHP_PHPDBG_DIR=/etc/php/8.3/phpdbg/
-ENV PHP_PHPDBG_CONF_DIR=${PHP_PHPDBG_DIR}/conf.d
 ENV TZ=Europe/Prague
 ENV COMPOSER_NO_INTERACTION=1
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -57,7 +55,6 @@ RUN apt update && apt full-upgrade -y && \
 # FILES (it overrides originals)
 ADD conf.d/custom.ini ${PHP_CLI_CONF_DIR}/20-custom.ini
 ADD conf.d/custom.ini ${PHP_CGI_CONF_DIR}/20-custom.ini
-ADD conf.d/custom.ini ${PHP_PHPDBG_CONF_DIR}/20-custom.ini
 
 # COMMAND
 CMD ["php"]
