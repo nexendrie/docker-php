@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV TERM xterm
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TERM=xterm
 
 # PHP
 ENV PHP_MODS_DIR=/etc/php/8.4/mods-available
