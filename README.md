@@ -7,7 +7,7 @@ Nexendrie PHP image
 
 Nexendrie PHP docker image for continuous integration. It is based on [dockette/php](https://github.com/dockette/php).
 
-PHP versions: 8.1, 8.2, 8.3 (older versions starting with 7.1 are available but not updated anymore)
+PHP versions: 8.1, 8.2, 8.3, 8.4 (older versions starting with 7.1 are available but not updated anymore)
 
 PHP extensions: bcmath, bz2, calendar, cgi, cli, ctype, curl, gd, gettext, iconv, intl, mbstring, mysqli, pdo, sqlite3, ssh2, xml, zip, pcov
 

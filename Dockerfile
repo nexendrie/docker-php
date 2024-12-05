@@ -4,10 +4,10 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
 # PHP
-ENV PHP_MODS_DIR=/etc/php/8.3/mods-available
-ENV PHP_CLI_DIR=/etc/php/8.3/cli/
+ENV PHP_MODS_DIR=/etc/php/8.4/mods-available
+ENV PHP_CLI_DIR=/etc/php/8.4/cli/
 ENV PHP_CLI_CONF_DIR=${PHP_CLI_DIR}/conf.d
-ENV PHP_CGI_DIR=/etc/php/8.3/cgi/
+ENV PHP_CGI_DIR=/etc/php/8.4/cgi/
 ENV PHP_CGI_CONF_DIR=${PHP_CGI_DIR}/conf.d
 ENV TZ=Europe/Prague
 ENV COMPOSER_NO_INTERACTION=1
@@ -24,21 +24,21 @@ RUN apt update && apt full-upgrade -y && \
     apt update && \
     apt install -y --no-install-recommends \
         git \
-        php8.3-bcmath \
-        php8.3-bz2 \
-        php8.3-cgi \
-        php8.3-cli \
-        php8.3-ctype \
-        php8.3-curl \
-        php8.3-gd \
-        php8.3-intl \
-        php8.3-mbstring \
-        php8.3-mysql \
-        php8.3-sqlite3 \
-        php8.3-ssh2 \
-        php8.3-zip \
-        php8.3-xml \
-        php8.3-pcov && \
+        php8.4-bcmath \
+        php8.4-bz2 \
+        php8.4-cgi \
+        php8.4-cli \
+        php8.4-ctype \
+        php8.4-curl \
+        php8.4-gd \
+        php8.4-intl \
+        php8.4-mbstring \
+        php8.4-mysql \
+        php8.4-sqlite3 \
+        php8.4-ssh2 \
+        php8.4-zip \
+        php8.4-xml \
+        php8.4-pcov && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     # PHING ####################################################################
