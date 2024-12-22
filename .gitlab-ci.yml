@@ -87,7 +87,7 @@ build:php8.4:
 
 pages:
   stage: deploy
-  image: nexendrie/php
+  image: nexendrie/php:8.3
   environment:
     name: pages
     url: https://nexendrie.gitlab.io/docker-php
