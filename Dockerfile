@@ -41,7 +41,8 @@ RUN apt update && apt full-upgrade -y && \
         php8.4-zip \
         php8.4-xml \
         php8.4-pcov \
-        php8.4-memcached && \
+        php8.4-memcached \
+        php8.4-redis && \
     # COMPOSER #################################################################
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     # PHING ####################################################################
