@@ -1,7 +1,7 @@
 Nexendrie PHP image
 ===================
 
-This is our PHP docker image which we use in GitLab CI. It is based on dockette/php but we provide versions 8.1, 8.2, 8.3 and 8.4 only.
+This is our PHP docker image which we use in GitLab CI. It is based on dockette/php but we provide versions 8.1, 8.2, 8.3, 8.4 and 8.5 only.
 
 It runs on Ubuntu 24.04 and contains a good number of PHP extensions, as well as Composer, phing and git.
 
