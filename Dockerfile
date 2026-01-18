@@ -24,6 +24,7 @@ RUN apt update && apt full-upgrade -y && \
     apt update && \
     apt install -y --no-install-recommends \
         git \
+        patch \
         memcached \
         php8.5-apcu \
         php8.5-bcmath \
