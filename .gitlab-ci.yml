@@ -37,7 +37,7 @@ variables:
   script:
   - BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
   - BASE_DIGEST=$(docker buildx imagetools inspect docker.io/library/ubuntu:24.04 --format '{{json .}}' | jq -r '.manifest.digest')
-  - docker build --build-arg PHP_VERSION="$VERSION" --build-arg GIT_COMMIT="$CI_COMMIT_SHA" --build-arg BUILD_DATE="$BUILD_DATE" --build-arg BASE_DIGET="$BASE_DIGEST"
+  - docker build --build-arg PHP_VERSION="$VERSION" --build-arg GIT_COMMIT="$CI_COMMIT_SHA" --build-arg BUILD_DATE="$BUILD_DATE" --build-arg BASE_DIGEST="$BASE_DIGEST"
 
   except:
     - master@nexendrie/docker-php
